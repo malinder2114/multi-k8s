@@ -6,7 +6,8 @@ before_install:
 
 script:
   # - docker run malinder2114/react-test npm test -- --coverage
-  - docker run -e CI=true malinder2114/react-test npm test
+  # - docker run -e CI=true malinder2114/react-test npm test
+  - docker run -e CI=true malinder2114/react-test npm test -- --coverage
 
 after_success:
   - docker build -t malinder2114/multi-client ./client
