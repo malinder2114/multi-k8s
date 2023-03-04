@@ -1,0 +1,15 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t malinder2114/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run malinder2114/react-test npm test -- --coverage
+
+after_success:
+  - docker build -t malinder2114/multi-client ./client
+  - docker build -t malinder2114/multi-nginxe ./nginx
+  - docker build -t malinder2114/multi-server ./server
+  - docker build -t malinder2114/multi-worker ./worker
+ 
