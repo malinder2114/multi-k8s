@@ -10,7 +10,7 @@ script:
 
 after_success:
   - docker build -t malinder2114/multi-client ./client
-  - docker build -t malinder2114/multi-nginxe ./nginx
+  - docker build -t malinder2114/multi-nginx ./nginx
   - docker build -t malinder2114/multi-server ./server
   - docker build -t malinder2114/multi-worker ./worker
 # login to the docker CLI
