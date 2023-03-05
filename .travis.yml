@@ -20,4 +20,4 @@ after_success:
   - docker push malinder2114/multi-nginx
   - docker push malinder2114/multi-server
   - docker push malinder2114/multi-worker
-# goto docker hub and your repositories should be present which can be fetched using docker pull <tag name>
+# goto docker hub and check your repos under repositories which can be fetched using docker pull <tag name>
